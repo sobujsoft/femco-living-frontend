@@ -258,6 +258,11 @@ body {
     padding: 80px 0;
 }
 
+.section-devider {
+    height: 10px;
+    background-color: #143237;
+}
+
 /* Height & Width */
 .h-33 {
     height: 33px;
@@ -290,6 +295,10 @@ body {
     font-size: 26px;
 }
 
+.fs-30 {
+    font-size: 30px;
+}
+
 .fs-40 {
     font-size: 40px;
 }
@@ -305,6 +314,10 @@ body {
 }
 
 /* Font Weight */
+.fw-400 {
+    font-weight: 400;
+}
+
 .fw-700 {
     font-weight: 700;
 }
@@ -531,3 +544,28 @@ body {
     }
 }
 /* Services - End */
+
+/* Projects - Start */
+.projects .projects-container > div {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .projects .projects-container > div:nth-child(1),
+    .projects .projects-container > div:nth-child(2),
+    .projects .projects-container > div:nth-child(3),
+    .projects .projects-container > div:nth-child(4),
+    .projects .projects-container > div:nth-child(5),
+    .projects .projects-container > div:nth-child(6) {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .projects .projects-container > div:nth-child(1),
+    .projects .projects-container > div:nth-child(2),
+    .projects .projects-container > div:nth-child(3) {
+        display: block;
+    }
+}
+/* Projects - End */
