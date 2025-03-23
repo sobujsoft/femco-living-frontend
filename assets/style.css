@@ -4,6 +4,7 @@
 :root {
     --theme: 6, 30, 34; /* #061E22 */
     --themeLight: 0, 76, 65; /* #004C41 */
+    --themeDarkLight: 20, 50, 55; /* #143237 */
     --themeLighter: 0, 59, 51; /* #003B33 */
     --themeSecondary: 162, 125, 83; /* #A17D53 */
 
@@ -280,20 +281,99 @@ body {
     background-color: rgb(var(--themeLighter));
 }
 
+.bg-dark-light {
+    background-color: rgb(var(--themeDarkLight));
+}
+
 /* Font Size */
 .fs-26 {
     font-size: 26px;
+}
+
+.fs-40 {
+    font-size: 40px;
 }
 
 @media (max-width: 991px) {
     .fs-18 {
         font-size: 18px;
     }
+
+    .fs-30-mx-991 {
+        font-size: 30px;
+    }
+}
+
+/* Font Weight */
+.fw-700 {
+    font-weight: 700;
+}
+
+@media (max-width: 991px) {
+    .fw-400-mx-991 {
+        font-weight: 400;
+    }
 }
 
 /* Letter Spacing */
 .ls-p6 {
     letter-spacing: 0.6px;
+}
+
+/* Slider */
+/* Slider Buttons */
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: #000;
+    z-index: 1000;
+}
+.slick-prev::before, .slick-next::before {
+    display: none;
+}
+
+.slick-next,
+.slick-prev {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 18px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #009883;
+    transition: all 0.4s ease-in-out;
+}
+
+.slick-prev {
+    left: 20px;
+}
+
+.slick-next {
+    right: 20px;
+}
+
+.slick-prev:hover,
+.slick-next:hover{
+    color: #0C111D;
+    background-color: #007F6D;
+}
+
+.slick-prev:focus,
+.slick-next:focus {
+    color: #ffffff;
+    background-color: #006557;
+}
+
+/* Text Overflow */
+.text-overflow-ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-overflow-ellipsis-2l {
+    -webkit-line-clamp: 2;
 }
 
 /* Navbar - Start */
