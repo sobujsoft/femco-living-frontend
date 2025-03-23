@@ -4,7 +4,10 @@
 :root {
     --theme: 6, 30, 34; /* #061E22 */
     --themeLight: 0, 76, 65; /* #004C41 */
+    --themeLighter: 0, 59, 51; /* #003B33 */
     --themeSecondary: 162, 125, 83; /* #A17D53 */
+
+    --trebuchet-ff: "Trebuchet MS", sans-serif;
 }
 
 body {
@@ -254,6 +257,45 @@ body {
     padding: 80px 0;
 }
 
+/* Height & Width */
+.h-33 {
+    height: 33px;
+}
+
+.h-64 {
+    height: 64px;
+}
+
+.w-64 {
+    width: 64px;
+}
+
+/* Font Family */
+.ff-trebuchet {
+    font-family: var(--trebuchet-ff);
+}
+
+/* Background Color */
+.bg-lighter {
+    background-color: rgb(var(--themeLighter));
+}
+
+/* Font Size */
+.fs-26 {
+    font-size: 26px;
+}
+
+@media (max-width: 991px) {
+    .fs-18 {
+        font-size: 18px;
+    }
+}
+
+/* Letter Spacing */
+.ls-p6 {
+    letter-spacing: 0.6px;
+}
+
 /* Navbar - Start */
 .navbar {
     position: fixed;
@@ -387,3 +429,25 @@ body {
     }
 }
 /* Hero Slider - End */
+
+/* Services - Start */
+@media (max-width: 991px) {
+    .services .theme-btn {
+        min-width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    .services .theme-btn {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .services .icon-content {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* Services - End */
