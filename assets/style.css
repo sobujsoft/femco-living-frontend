@@ -250,6 +250,15 @@ body {
 }
 
 /* Navbar - Start */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgb(var(--theme)) !important;
+}
+
 .navbar .nav-link {
     color: #ffffff;
     font-weight: 500;
@@ -314,6 +323,8 @@ body {
 
 /* Hero Slider - Start */
 .hero-slider {
+    padding-top: 82px;
+
     z-index: 2;
     height: 100vh;
     min-height: 600px;
