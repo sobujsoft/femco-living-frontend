@@ -1,0 +1,250 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --theme: 6, 30, 34; /* #061E22 */
+    --themeLight: 0, 76, 65; /* #004C41 */
+    --themeSecondary: 162, 125, 83; /* #A17D53 */
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: rgb(var(--theme));
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0.6px;
+
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.gradient-txt {
+    background: linear-gradient(to right, #C19D73, #A17D53, #6D502E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-top-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    display: inline-block;
+    letter-spacing: 0.6px;
+    margin: 0 0 0 6px;
+}
+
+.section-top-devider {
+    width: 65px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-top-devider::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.sec-devider-theme:before {
+    background-color: rgb(var(--theme));
+}
+
+.sec-devider-light:before {
+    background-color: #ffffff;
+}
+
+.big-title {
+    font-family: Trebuchet MS;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 100%;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+/* Text Image Background */
+.text-img-bg {
+    background: url('./images/image.png') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-btn {
+    opacity: 0.8;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    min-width: 135px;
+    min-height: 40px;
+    padding: 10px 24px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    background-color: rgb(var(--themeLight));
+}
+
+.section-btn:hover {
+    opacity: 1;
+}
+
+/* Buttons */
+.theme-btn {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    overflow: hidden;
+    line-height: 100%;
+    position: relative;
+    border-radius: 6px;
+    padding: 10px 24px;
+    letter-spacing: 0px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Primary Button */
+.primary-btn {
+    border: 0;
+    background: linear-gradient(to right, #C19D73, #A17D53, #6D502E);
+}
+
+.primary-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #6D502E, #A17D53, #C19D73);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.primary-btn:hover::before {
+    opacity: 1;
+}
+
+.primary-btn:focus::before {
+    opacity: 0;
+}
+
+.primary-btn span {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+/* Secondary Button */
+.secondary-btn  {
+    border: 1px solid #004C41;
+    background-color: #004C41;
+}
+
+.secondary-btn:hover {
+    background-color: #006557;
+}
+
+.secondary-btn:focus {
+    border: 1px solid #008774;
+    background-color: #143237;
+}
+
+/* Outline Button */
+.outline-btn {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+}
+
+.outline-btn:hover {
+    background-color: #161B26;
+}
+
+.outline-btn:focus {
+    background-color: #0C111D;
+}
+
+/* Filled Button */
+.filled-btn {
+    color: #143237;
+    border: 1px solid #143237;
+    background-color: #fafafa;
+}
+
+.filled-btn:hover {
+    color: #143237;
+    border: 1px solid #143237;
+    background-color: #CECFD2;
+}
+
+.filled-btn:focus {
+    color: #143237;
+    border: 1px solid #143237;
+    background-color: #FAFAFA;
+}
+
+/* Contact Us Button */
+.contact-us-btn {
+    height: 64px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #003B33;
+    border: 1px solid #333741;
+    box-shadow: 0px 4px 4px 0px #15556033;
+}
+
+.contact-us-btn:hover {
+    background-color: #006557;
+}
+
+.contact-us-btn:focus {
+    background-color: #007F6D;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px 0px #15556033;
+}
+
+.contact-us-btn img {
+    height: 35px;
+    width: 35px;
+}
+
+/* Contact Us Button Mbl */
+.contact-us-btn-mbl {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #003B33;
+    border: 1px solid #333741;
+    box-shadow: 0px 4px 4px 0px #15556033;
+}
+
+.contact-us-btn-mbl:hover,
+.contact-us-btn-mbl:focus {
+    background-color: #006557;
+}
+
+.contact-us-btn-mbl img {
+    height: 20px;
+    width: 20px;
+}
