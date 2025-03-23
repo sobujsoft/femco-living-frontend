@@ -28,6 +28,12 @@ body {
     font-family: "Trebuchet MS", sans-serif;
 }
 
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 26px;
+    }
+}
+
 .gradient-txt {
     background: linear-gradient(to right, #C19D73, #A17D53, #6D502E);
     -webkit-background-clip: text;
@@ -268,8 +274,16 @@ body {
     height: 33px;
 }
 
+.h-56 {
+    height: 56px;
+}
+
 .h-64 {
     height: 64px;
+}
+
+.w-56 {
+    width: 56px;
 }
 
 .w-64 {
@@ -291,6 +305,10 @@ body {
 }
 
 /* Font Size */
+.fs-16 {
+    font-size: 16px;
+}
+
 .fs-26 {
     font-size: 26px;
 }
@@ -569,3 +587,13 @@ body {
     }
 }
 /* Projects - End */
+
+/* Values - Start */
+.values .circle {
+    background-color: #ffffff;
+}
+
+.values .circle-inner {
+    background-color: #D9F2EF;
+}
+/* Values - End */
