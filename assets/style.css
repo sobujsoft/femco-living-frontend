@@ -109,7 +109,7 @@ body {
     line-height: 100%;
     position: relative;
     border-radius: 6px;
-    padding: 10px 24px;
+    padding: 12px 24px;
     letter-spacing: 0px;
     display: inline-block;
     text-decoration: none;
@@ -248,3 +248,66 @@ body {
     height: 20px;
     width: 20px;
 }
+
+/* Navbar - Start */
+.navbar .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {
+    filter: invert(100%)
+}
+
+@media (min-width: 576px) {
+    .navbar .navbar-brand img {
+        height: 40px;
+        width: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar .navbar-brand img {
+        height: auto;
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .navbar .ex-btn .theme-btn {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar .navbar-collapse {
+        border-top: 10px solid #143237;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+
+    .navbar .nav-item {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #143237;
+    }
+
+    .navbar .nav-item:first-child {
+        /*border-top: 2px solid #143237;*/
+    }
+
+    .navbar .nav-item:last-child {
+        border: 0;
+    }
+
+    .navbar .navbar-nav.mx-auto .nav-item:last-child {
+        border-bottom: 2px solid #143237;
+    }
+}
+/* Navbar - End */
