@@ -296,6 +296,10 @@ body {
 }
 
 /* Background Color */
+.bg-heme {
+    background-color: rgb(var(--theme));
+}
+
 .bg-lighter {
     background-color: rgb(var(--themeLighter));
 }
@@ -311,6 +315,10 @@ body {
 
 .fs-18 {
     font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
 }
 
 .fs-26 {
@@ -611,3 +619,22 @@ body {
     border: 5px solid #ffffff;
 }
 /* Values - End */
+
+/* How to work - start */
+.how-it-works img {
+    height: 320px;
+    width: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -40%;
+    margin-right: -35%;
+    object-position: left;
+}
+
+@media (max-width: 767px) {
+    .how-it-works img {
+        margin-top: -30%;
+        margin-right: -25%;
+    }
+}
+/* How to work - end */
