@@ -309,6 +309,10 @@ body {
 }
 
 /* Font Size */
+.fs-12 {
+    font-size: 12px;
+}
+
 .fs-16 {
     font-size: 16px;
 }
@@ -319,6 +323,10 @@ body {
 
 .fs-20 {
     font-size: 20px;
+}
+
+.fs-22 {
+    font-size: 22px;
 }
 
 .fs-26 {
@@ -376,9 +384,25 @@ body {
     right: -5px;
 }
 
+/* Line Height */
+.lh-22 {
+    line-height: 22px;
+}
+
 /* Z-Index */
 .z-index-9 {
    z-index: 9;
+}
+
+@media (min-width: 1200px) {
+    .display-1 {
+        font-size: 6rem;
+    }
+}
+
+/* Border */
+.theme-bb-1 {
+    border-bottom: 1px solid rgb(var(--theme));
 }
 
 /* Slider */
