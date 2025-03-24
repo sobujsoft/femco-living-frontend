@@ -309,6 +309,10 @@ body {
     font-size: 16px;
 }
 
+.fs-18 {
+    font-size: 18px;
+}
+
 .fs-26 {
     font-size: 26px;
 }
@@ -324,6 +328,10 @@ body {
 @media (max-width: 991px) {
     .fs-18-mx-991 {
         font-size: 18px;
+    }
+
+    .fs-26-mx-991 {
+        font-size: 26px;
     }
 
     .fs-30-mx-991 {
@@ -349,6 +357,15 @@ body {
 /* Letter Spacing */
 .ls-p6 {
     letter-spacing: 0.6px;
+}
+
+/* Position */
+.b--5 {
+    bottom: -5px;
+}
+
+.r--5 {
+    right: -5px;
 }
 
 /* Slider */
@@ -590,10 +607,7 @@ body {
 
 /* Values - Start */
 .values .circle {
-    background-color: #ffffff;
-}
-
-.values .circle-inner {
     background-color: #D9F2EF;
+    border: 5px solid #ffffff;
 }
 /* Values - End */
