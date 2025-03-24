@@ -269,6 +269,17 @@ body {
     background-color: #143237;
 }
 
+@media (max-width: 767px) {
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-devider {
+        height: 5px;
+        background-color: #143237;
+    }
+}
+
 /* Height & Width */
 .h-33 {
     height: 33px;
