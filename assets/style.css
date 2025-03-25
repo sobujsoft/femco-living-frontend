@@ -836,6 +836,12 @@ body {
     bottom: 14px;
 }
 
+.items-details-container .more-photos {
+    position: absolute;
+    bottom: 10px;
+    right: -5px;
+}
+
 #gridModal img {
     border-radius: 8px;
 }
