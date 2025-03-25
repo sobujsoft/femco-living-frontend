@@ -12,6 +12,18 @@ $(document).ready(function(){
         nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
     });
 
+    $('.details-page-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        arrows: false,
+    });
+
+
     // Get the modal and iframe
     var youtubeModal = $('#youtubeModal');
     var youtubeIframe = $('#youtubeIframe');
