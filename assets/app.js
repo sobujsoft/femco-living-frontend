@@ -31,3 +31,71 @@ $(document).ready(function(){
         youtubeIframe.attr('src', '');
     });
 });
+
+$(document).ready(function() {
+    const images = $('.lightbox-image-container img');
+    const viewMore = $('.view-more');
+    const gridModal = $('#gridModal');
+    const singleImageModal = $('#singleImageModal');
+    const modalImageGrid = $('.modal-image-grid');
+    const singleModalImage = $('#singleModalImage');
+    const prevButton = $('#prevButton');
+    const nextButton = $('#nextButton');
+    const imageCounter = $('#imageCounter');
+    let currentIndex = 0;
+
+    if (images.length > 3) {
+        viewMore.show();
+    }
+
+    viewMore.click(function() {
+        updateGridModal();
+        gridModal.modal('show');
+    });
+
+    images.click(function() {
+        currentIndex = $(this).data('index');
+        updateGridModal();
+        gridModal.modal('show');
+    });
+
+    function updateGridModal() {
+        modalImageGrid.empty();
+        images.each(function() {
+            const img = $(this).clone().removeClass('d-none').attr('data-index', $(this).data('index'));
+            modalImageGrid.append(img);
+        });
+        modalImageGrid.find('img').click(function() {
+            currentIndex = $(this).data('index');
+            updateSingleModalImage();
+            singleImageModal.modal('show');
+        });
+    }
+
+    function updateSingleModalImage() {
+        const imgSrc = images.eq(currentIndex).attr('src');
+        singleModalImage.attr('src', imgSrc);
+
+        // Preload image to prevent flickering
+        const img = new Image();
+        img.src = imgSrc;
+        img.onload = function() {
+            singleModalImage.attr('src', imgSrc);
+            updateImageCounter();
+        };
+    }
+
+    function updateImageCounter() {
+        imageCounter.text(`${currentIndex + 1}/${images.length}`);
+    }
+
+    prevButton.click(function() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateSingleModalImage();
+    });
+
+    nextButton.click(function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSingleModalImage();
+    });
+});

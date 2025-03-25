@@ -776,3 +776,72 @@ body {
     white-space: nowrap;
 }
 /* Contact Hero - End */
+
+/* Projects Details - Start */
+/* Lightbox Layout */
+.items-details-container .images-lightbox .lightbox-image-container {
+    display: grid;
+    /* width: 940px;
+    height: 392px; */
+    border-radius: 8px;
+    gap: 16px;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+        "pic1 pic2"
+        "pic1 pic3";
+}
+
+.items-details-container .images-lightbox .lightbox-image-container img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.items-details-container .images-lightbox .lightbox-image-container img:nth-child(1) {
+    grid-area: pic1;
+    display: block !important;
+}
+
+.items-details-container .images-lightbox .lightbox-image-container img:nth-child(2) {
+    grid-area: pic2;
+    display: block !important;
+}
+
+.items-details-container .images-lightbox .lightbox-image-container img:nth-child(3) {
+    grid-area: pic3;
+    display: block !important;
+}
+
+/* Modal */
+.items-details-container .images-lightbox .view-more {
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 7px 11px;
+    min-height: 32px;
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+    color: #414143;
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    display: none;
+}
+
+.items-details-container .images-lightbox .view-more:hover {
+    bottom: 14px;
+}
+
+#gridModal img {
+    border-radius: 8px;
+}
+
+#gridModal,
+#singleImageModal {
+    z-index: 99999;
+}
+/* Projects Details - End */
