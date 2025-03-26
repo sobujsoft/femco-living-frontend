@@ -356,6 +356,10 @@ body {
     font-size: 12px;
 }
 
+.fs-14 {
+    font-size: 14px;
+}
+
 .fs-16 {
     font-size: 16px;
 }
@@ -438,6 +442,10 @@ body {
 /* Line Height */
 .lh-22 {
     line-height: 22px;
+}
+
+.lh-24 {
+    line-height: 24px;
 }
 
 /* Z-Index */
@@ -959,3 +967,9 @@ body {
     max-width: 200px;
 }
 /* Team Member - End */
+
+/* Affiliates - Section Start */
+.affiliates .card {
+    border: 2px solid rgb(var(--themeDarkLight));
+}
+/* Affiliates - Section End */
