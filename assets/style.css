@@ -384,6 +384,10 @@ body {
     font-size: 40px;
 }
 
+.fs-10vw {
+    font-size: 10vw;
+}
+
 @media (max-width: 991px) {
     .fs-18-mx-991 {
         font-size: 18px;
@@ -455,6 +459,11 @@ body {
 /* Margin */
 .mt-82 {
     margin-top: 82px;
+}
+
+/* Text Alignment */
+.text-start-i {
+    text-align: start !important;
 }
 
 /* Nav Tab */
@@ -944,3 +953,9 @@ body {
     z-index: 99999 !important;
 }
 /* Projects Details - End */
+
+/* Team Member - Start */
+.team-members .card img {
+    max-width: 200px;
+}
+/* Team Member - End */
