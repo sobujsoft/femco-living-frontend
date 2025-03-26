@@ -934,4 +934,9 @@ body {
     color: #ffffff;
     border: 1px solid #61646C;
 }
+
+/* Gallery */
+.lg-outer {
+    z-index: 99999 !important;
+}
 /* Projects Details - End */
