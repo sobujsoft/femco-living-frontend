@@ -754,7 +754,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("../assets/images/hero-img.png");
+    /*background-image: url("../assets/images/hero-img.png");*/
 }
 
 .hero-slider::before {
@@ -782,6 +782,20 @@ body {
     font-size: 26px;
     line-height: 100%;
     letter-spacing: 0.6px;
+}
+
+.hero-carousel .slick-dots {
+    left: 16%;
+    bottom: 200px;
+    width: auto;
+}
+
+.hero-carousel .slick-dots li button:before {
+    font-size: 15px;
+    color: #61646C;
+    padding-top: 0.4px;
+    border-radius: 50%;
+    border: 1px solid #85888E;
 }
 
 @media (max-width: 1199px) {
