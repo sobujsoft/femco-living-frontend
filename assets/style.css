@@ -576,6 +576,90 @@ body {
     background-color: #006557;
 }
 
+.slider-container .slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container .slider > div {
+    position: relative;
+    z-index: 9;
+}
+
+.slider-container .slider > div::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    display: block;
+    z-index: 99;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+.slider-container:hover .slider > div::before {
+    height: 100%;
+    background-color: rgb(var(--theme), 0.5);
+}
+
+.slider-container .slider .slick-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slider-container .slider .slick-slide img {
+    transition: transform 1s ease-in-out;
+}
+
+.slider-container:hover .slider .slick-slide > img {
+    animation: zoomInOut 10s infinite ease-in-out;
+}
+
+.slider .slick-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    opacity: 0;
+    z-index: 9999;
+    transform: translateX(-50%);
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slider:hover .slick-dots {
+    opacity: 1;
+}
+
+.slider-container .slider .slick-dots li button:before {
+    opacity: 1;
+    font-size: 18px;
+    color: #61646C;
+    border-radius: 50%;
+    border: 1px solid #85888E;
+    transition: all 0.4s ease-in-out;
+}
+
+.slider-container .slider .slick-dots li button:hover:before {
+    border: 1px solid #ffffff;
+}
+
+.slider-container .slider .slick-dots li.slick-active button:before {
+    color: #ffffff;
+}
+
 /* Text Overflow */
 .text-overflow-ellipsis {
     display: -webkit-box;
@@ -967,11 +1051,11 @@ body {
 }
 
 .details-page-slider .slick-dots li button:before {
+    padding-top: 1px;
     font-size: 20px;
     color: #61646C;
     border-radius: 50%;
     border: 1px solid #85888E;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -980,6 +1064,7 @@ body {
     text-align: center;
     opacity: 1;
     top: 20px;
+    transform: scale(.9);
 }
 
 .details-page-slider .slick-dots li.slick-active button:before {
