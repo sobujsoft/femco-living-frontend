@@ -1170,3 +1170,22 @@ body {
 .phone-num-qr .offcanvas .qr-close:hover {
     color: rgb(220, 53, 69);
 }
+
+/* Hero Call */
+.hero-slider .hero-call {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.hero-slider .hero-call img {
+    height: 35px;
+    width: 35px;
+}
