@@ -111,3 +111,76 @@ $(document).ready(function() {
         updateSingleModalImage();
     });
 });
+
+// Title type effect
+$(document).ready(function () {
+    // Function to check if an element is in the viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle the scroll event
+    function handleScroll() {
+        $('.section-title').each(function () {
+            if (isElementInViewport(this) && !$(this).hasClass('visible')) {
+                $(this).addClass('visible');
+
+                // Get the text content of the title
+                const text = $(this).text();
+                $(this).text(''); // Clear the text
+
+                // Initialize Typed.js for the write effect
+                new Typed(this, {
+                    strings: [text],
+                    typeSpeed: 50, // Typing speed in milliseconds
+                    showCursor: false, // Hide the cursor
+                    onComplete: function () {
+                        // Optional: Add any callback after the animation completes
+                    }
+                });
+            }
+        });
+    }
+
+    // Attach the scroll event listener
+    $(window).on('scroll', handleScroll);
+
+    // Trigger the scroll event on page load
+    handleScroll();
+});
+
+// ********** Section fade animation ********** //
+$(document).ready(function () {
+    function revealOnScroll() {
+        $(".fade-section").each(function () {
+            let sectionPos = $(this).offset().top;
+            let windowHeight = $(window).height();
+            let scrollTop = $(window).scrollTop();
+
+            if (sectionPos < scrollTop + windowHeight - 100) {
+                $(this).css("opacity", "1");
+
+                if ($(this).hasClass("fadeInLeft")) {
+                    $(this).addClass("animate__animated animate__fadeInLeft");
+                } else if ($(this).hasClass("fadeInRight")) {
+                    $(this).addClass("animate__animated animate__fadeInRight");
+                } else {
+                    $(this).addClass("animate__animated animate__fadeInUp");
+                }
+            }
+        });
+
+        // .fade-section .fadeInLeft
+        // .fade-section .fadeInRight
+        // .fade-section .fadeInUp
+    }
+
+    $(window).on("scroll", revealOnScroll);
+    revealOnScroll();
+});
