@@ -184,3 +184,9 @@ $(document).ready(function () {
     $(window).on("scroll", revealOnScroll);
     revealOnScroll();
 });
+
+// ********* Phone Number QR Code ************ //
+$("#showPhoneNumber").click(function () {
+    var offcanvas = new bootstrap.Offcanvas(document.getElementById('openNumberQR'));
+    offcanvas.show();
+});
