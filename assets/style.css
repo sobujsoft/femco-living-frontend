@@ -149,6 +149,8 @@ body {
 /* Primary Button */
 .primary-btn {
     border: 0;
+    overflow: hidden;
+    position: relative;
     background: linear-gradient(to right, #C19D73, #A17D53, #6D502E);
 }
 
@@ -177,6 +179,36 @@ body {
     color: #fff;
     position: relative;
     z-index: 2;
+}
+
+.primary-btn .a, .primary-btn .b {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.2s;
+}
+
+.primary-btn .width {
+    visibility: hidden;
+}
+
+.primary-btn .b {
+    transform: translateY(100%);
+}
+
+.primary-btn:hover .a {
+    transform: translateY(-100%);
+    transition: all ease 0.2s;
+}
+
+.primary-btn:hover .b {
+    transform: translateY(0);
+    transition: all ease 0.2s;
 }
 
 /* Secondary Button */
