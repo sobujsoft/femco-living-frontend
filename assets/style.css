@@ -769,7 +769,7 @@ body {
     .navbar .navbar-brand img {
         height: auto;
         width: 100%;
-        max-width: 150px;
+        max-width: 120px;
     }
 
     .navbar .ex-btn .theme-btn {
