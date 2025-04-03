@@ -394,6 +394,10 @@ body {
     background-color: rgb(var(--themeDarkLight));
 }
 
+.color-theme {
+    color: rgb(var(--theme));
+}
+
 .color-dark-deep {
     color: rgb(var(--themeDeep));
 }
@@ -628,12 +632,12 @@ body {
     display: block;
     z-index: 99;
     opacity: 1;
+    background-color: rgb(var(--theme), 0.2);
     transition: all 0.4s ease-in-out;
 }
 
 .slider-container:hover .slider > div::before {
     height: 100%;
-    background-color: rgb(var(--theme), 0.5);
 }
 
 .slider-container .slider .slick-slide {
@@ -703,6 +707,30 @@ body {
 .text-overflow-ellipsis-2l {
     -webkit-line-clamp: 2;
 }
+
+/* Deep Hover Effect - Start */
+.projects-card-deep-effect {
+    background-color: #143237;
+    border: 2px solid transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.projects-card-deep-effect:hover {
+    border: 2px solid #009883;
+    background-color: #003B33;
+}
+/* Deep Hover Effect - End */
+
+/* Card title underline - Start */
+.card-title-underline h3 {
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.card-title-underline:hover h3 {
+    text-decoration: underline;
+}
+/* Card title underline - End */
 
 /* Navbar - Start */
 .navbar {
@@ -875,6 +903,10 @@ body {
 /* Services - End */
 
 /* Projects - Start */
+.projects .slick-dotted.slick-slider {
+    margin-bottom: 20px;
+}
+
 .projects .projects-container > div {
     display: none;
 }
@@ -1234,4 +1266,17 @@ body {
 .hero-slider .hero-call img {
     height: 35px;
     width: 35px;
+}
+
+/* Video Modal */
+.modal-video .overlay-blur-bg svg {
+    width: 44px;
+    height: 44px;
+}
+
+@media (min-width: 992px) {
+    .modal-video .overlay-blur-bg:first-child svg {
+        width: 66px;
+        height: 66px;
+    }
 }
