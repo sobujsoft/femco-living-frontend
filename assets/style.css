@@ -807,11 +807,12 @@ body {
 /* Hero Slider - Start */
 .hero-slider {
     padding-top: 82px;
+    margin-bottom: 82px;
 
     z-index: 2;
-    height: 100vh;
     min-height: 600px;
     background-size: cover;
+    height: calc(100vh - 82px);
     background-position: center;
     background-repeat: no-repeat;
     /*background-image: url("../assets/images/hero-img.png");*/
@@ -1257,15 +1258,29 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-
     position: absolute;
-    bottom: 20px;
+    bottom: -60px;
     right: 20px;
 }
 
 .hero-slider .hero-call img {
     height: 35px;
     width: 35px;
+}
+
+@media (max-width: 575px) {
+    .hero-slider .hero-call {
+        height: 40px;
+        width: 40px;
+
+        bottom: -55px;
+        right: 8px;
+    }
+
+    .hero-slider .hero-call img {
+        height: 20px;
+        width: 20px;
+    }
 }
 
 /* Video Modal */
