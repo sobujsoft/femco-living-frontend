@@ -664,6 +664,7 @@ body {
 }
 
 .slider-container .slider .slick-slide img {
+    max-width: 110% !important;
     transition: transform 1s ease-in-out;
 }
 

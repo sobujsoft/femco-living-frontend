@@ -8,8 +8,8 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 2000,
         arrows: true,
-        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
     });
 
     $('.hero-carousel').slick({
@@ -21,8 +21,8 @@ $(document).ready(function(){
         autoplay: false,
         autoplaySpeed: 2000,
         arrows: true,
-        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-arrow-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-arrow-right"></i></button>',
     });
 
     $('.details-page-slider').slick({
