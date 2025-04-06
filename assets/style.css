@@ -95,7 +95,15 @@ body {
 }
 
 .sec-devider-light:before {
-    background-color: #ffffff;
+    background-color: #006557;
+}
+
+.hero-slider .sec-devider-light:before {
+    background-color: #F5F5F6;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
 }
 
 .big-title {
