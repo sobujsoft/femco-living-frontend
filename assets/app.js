@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 $(document).ready(function() {
     const images = $('.lightbox-image-container img');
-    const viewMore = $('.view-more');
+    const viewMore = $('.more-photos');
     const gridModal = $('#gridModal');
     const singleImageModal = $('#singleImageModal');
     const modalImageGrid = $('.modal-image-grid');
@@ -69,8 +69,19 @@ $(document).ready(function() {
     const imageCounter = $('#imageCounter');
     let currentIndex = 0;
 
-    if (images.length > 3) {
-        viewMore.show();
+    // Updated condition for showing the "more" button
+    if (window.innerWidth <= 767) {
+        if (images.length > 4) {
+            viewMore.show();
+        } else {
+            viewMore.hide();
+        }
+    } else {
+        if (images.length > 3) {
+            viewMore.show();
+        } else {
+            viewMore.hide();
+        }
     }
 
     viewMore.click(function() {
@@ -124,6 +135,7 @@ $(document).ready(function() {
         updateSingleModalImage();
     });
 });
+
 
 // Title type effect
 $(document).ready(function () {

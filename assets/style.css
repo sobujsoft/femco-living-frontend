@@ -1110,22 +1110,6 @@ body {
     display: block !important;
 }
 
-@media (max-width: 767px) {
-    .items-details-container .images-lightbox .lightbox-image-container {
-        border-radius: 4px;
-        gap: 10px;
-        max-width: 96%;
-        grid-template-columns: 50% 50%;
-        grid-template-areas:
-            "pic1 pic1"
-            "pic2 pic3";
-    }
-
-    .items-details-container .more-photos {
-        display: none;
-    }
-}
-
 /* Modal */
 .items-details-container .images-lightbox .view-more {
     border-radius: 6px;
@@ -1187,6 +1171,69 @@ body {
 .details-page-slider .slick-dots li.slick-active button:before {
     color: #ffffff;
     border: 1px solid #61646C;
+}
+
+@media (max-width: 767px) {
+    .items-details-container .images-lightbox .lightbox-image-container {
+        gap: 10px;
+        max-width: 100%;
+        grid-template-columns: 33.33333333333%;
+        grid-template-areas: 
+            "pic1 pic1 pic1"
+            "pic2 pic3 pic4";
+    }
+
+    .items-details-container .more-photos {
+        /* display: none; */
+    }
+
+    .items-details-container .images-lightbox .next-arrow {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        font-size: 18px;
+        border-radius: 50%;
+        align-items: center;
+        transform: scale(0.7);
+        justify-content: center;
+        background-color: #009883;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .items-details-container .images-lightbox .next-arrow:hover {
+        color: #0C111D;
+        background-color: #007F6D;
+    }
+
+    .items-details-container .images-lightbox .next-arrow:focus {
+        color: #ffffff;
+        background-color: #006557;
+    }
+
+    .items-details-container .images-lightbox {
+        overflow: hidden;
+    }
+
+    .items-details-container .more-photos {
+        position: absolute;
+        bottom: 2px;
+        right: -25px;
+        background-color: transparent;
+        border: 0;
+    }
+
+    .items-details-container .images-lightbox .lightbox-image-container img:nth-child(4) {
+        grid-area: pic4;
+        display: block !important;
+    }
+
+    .items-details-container .images-lightbox .lightbox-image-container img:nth-child(1),
+    .items-details-container .images-lightbox .lightbox-image-container img:nth-child(2),
+    .items-details-container .images-lightbox .lightbox-image-container img:nth-child(3),
+    .items-details-container .images-lightbox .lightbox-image-container img:nth-child(4) {
+        border: 1px solid #003B33;
+        border-radius: 0 !important;
+    }
 }
 
 /* Gallery */
